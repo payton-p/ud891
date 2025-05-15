@@ -1,13 +1,13 @@
-(function() {
+(function () {
   'use strict';
 
   // Define values for keycodes
-  var VK_ENTER      = 13;
-  var VK_SPACE      = 32;
-  var VK_LEFT       = 37;
-  var VK_UP         = 38;
-  var VK_RIGHT      = 39;
-  var VK_DOWN       = 40;
+  var VK_ENTER = 13;
+  var VK_SPACE = 32;
+  var VK_LEFT = 37;
+  var VK_UP = 38;
+  var VK_RIGHT = 39;
+  var VK_DOWN = 40;
 
   // Helper function to convert NodeLists to Arrays
   function slice(nodes) {
@@ -39,8 +39,8 @@
 
   }
 
-  RadioGroup.prototype.handleKeyDown = function(e) {
-    switch(e.keyCode) {
+  RadioGroup.prototype.handleKeyDown = function (e) {
+    switch (e.keyCode) {
 
       case VK_UP:
       case VK_LEFT: {
@@ -64,7 +64,7 @@
         break;
       }
 
-    case VK_SPACE:
+      case VK_SPACE:
         var focusedButton = e.target;
         var idx = this.buttons.indexOf(focusedButton);
         if (idx < 0)
@@ -79,7 +79,7 @@
     this.changeFocus();
   };
 
-  RadioGroup.prototype.handleClick = function(e) {
+  RadioGroup.prototype.handleClick = function (e) {
     var button = e.target;
     var idx = this.buttons.indexOf(button);
     if (idx < 0)
@@ -88,7 +88,7 @@
     this.changeFocus();
   };
 
-  RadioGroup.prototype.changeFocus = function() {
+  RadioGroup.prototype.changeFocus = function () {
     // Set the old button to tabindex -1
     this.focusedButton.tabIndex = -1;
     this.focusedButton.removeAttribute('checked');
