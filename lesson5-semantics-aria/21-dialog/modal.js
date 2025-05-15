@@ -48,7 +48,7 @@ function openModal(e) {
           lastTabStop.focus();
         }
 
-      // TAB
+        // TAB
       } else {
         if (document.activeElement === lastTabStop) {
           e.preventDefault();
