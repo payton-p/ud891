@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
 
-    <title>Modals and Keyboard Traps</title>
-    <meta name="description" content="Fixing tabindex">
+<head>
+  <meta charset="utf-8">
 
-    <!-- Mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
-    <link href='http://fonts.googleapis.com/css?family=Courgette|Roboto:400,300' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
+  <title>Modals and Keyboard Traps</title>
+  <meta name="description" content="Fixing tabindex">
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="main.css">
+  <link href='http://fonts.googleapis.com/css?family=Courgette|Roboto:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
   <div class="wrapper">
     <header>
       <div class="container">
@@ -131,10 +133,9 @@
         </div>
       </div>
     </footer>
-  </div> <!-- .wrapper -->
+  </div>
 
-  <!-- FIXME: there's a role for that -->
-  <div class="modal" aria-labelledby="login">
+  <div class="modal" role="dialog" aria-labelledby="login">
     <h1 id="login">Log in to Kangaroo Kilometres</h1>
     <div class="field">
       <label for="username">Frequent flyer number</label>
@@ -144,9 +145,10 @@
       <label for="password">Password</label>
       <input id="password" type="password" name="pw">
     </div>
-    <button id="close">Log in</button>
+    <button id="signup">Log in</button>
   </div>
   <div class="modal-overlay"></div>
   <script src="modal.js"></script>
-  </body>
+</body>
+
 </html>
